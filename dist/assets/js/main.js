@@ -135,7 +135,7 @@ const categoryAdvantagesSlider = new Swiper(".category-advantages-grid.swiper", 
 	}
 })
 
-
+/*
 const servicesCard = document.querySelectorAll('.our-services__item');
 if ( servicesCard.length ){
 	servicesCard.forEach( sc => {
@@ -154,7 +154,7 @@ if ( servicesCard.length ){
 	
 		});
 	} )
-}
+}*/
 
 
 const orServices  = new Swiper(".swiper.our-services", {
