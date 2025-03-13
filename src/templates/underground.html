@@ -1,0 +1,85 @@
+    <div class="hystmodal" id="feedback-modal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div class="hystmodal__content">
+                    <form  class="modal-form">
+                        <p class="modal-form-title text-center">Заказать звонок менеджера</p>
+                        <p class="modal-form-subtitle text-center">Уточните Ваш телефон и мы перезвоним
+                            Вам максимально быстро.</p>
+
+                        <label class="modal-input-wrap">
+                            <span class="modal-input-label">Ваше имя*</span>
+                            <input type="text" class="modal-input" name="name" required>
+                        </label>
+
+                        <label class="modal-input-wrap">
+                            <span class="modal-input-label">Ваше телефон*</span>
+                            <input type="tel" class="modal-input" name="phone" required>
+                        </label>
+
+                        <div class="modal-submit-wrap">
+                            <button class="green-btn">отправить заявку</button>
+                        </div>
+                        <div class="page-form__privacy-block">
+                            <label class="form-approve">
+                                <input type="checkbox" name="approve" checked="" class="form-approve__input-checkbox" data-approve=".green-btn">
+                                <span class="form-approve__visible-cb"></span>
+                                <span class="form-approve__text text-3">Я согласен на обработку персональных данных</span>
+                            </label>
+
+
+                            <a href="#" class="page-form__privacy-link" target="_blank">Политика конфиденциальности</a>
+                        </div>
+
+                        <img src="assets/img/forms/modal-phone.png" alt="" class="modal-phone">
+                    </form>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="hystmodal" id="thanks-modal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+
+                <img src="assets/img/forms/check.svg" alt="" class="hystmodal__check">
+                <div class="thanks-text-block">
+                    <p class="thanks-text-block__title">Спасибо,</p>
+                    <p class="thanks-text-block__subtitle">мы получили вашу заявку </p>
+                    <div class="thanks-text-block__line"></div>
+                    <p class="thanks-text-block__text">В ближайшее время с Вами свяжется наш специалист<br/>
+                        для уточнения деталей Вашей заявки</p>
+                </div>
+
+                <div class="thanks-soc-links">
+                    <a href="#" target="_blank">
+                        <img src="assets/img/icons/VK.svg" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="assets/img/icons/Telegram.svg" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="assets/img/icons/WhatsApp.svg" alt="">
+                        
+                    </a>
+                    <a href="#" target="_blank">
+                        
+                        <img src="assets/img/icons/Rutube.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fancybox.umd.js"></script>
+    <script src="assets/js/hystmodal.min.js"></script>
+    <script src="assets/js/imask.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

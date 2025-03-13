@@ -1,0 +1,123 @@
+.about-intro-section{
+    padding-top: 40px;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 40px, 50px, padding-top);
+    
+
+    h1{
+        margin-bottom: 32px;
+    }
+}
+
+.about-intro {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 32px;
+    flex-direction: column;
+    @media (min-width: 768px){
+        flex-direction: row;
+    }
+}
+.about-intro__text-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px){
+        width: calc(50% - 10px);
+    }
+}
+
+.about-intro__text-block {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.title-decoration {
+}
+.about-intro__text {
+    
+    padding-top: 16px;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 230px;
+        height: 1px;
+        background-color: var(--black);
+
+        @media (min-width: 768px){
+            height: 2px;
+        }
+    }
+
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 30px, padding-top);
+    
+}
+.about-intro__media-content {
+    width: 100%;
+
+    
+
+    @media (min-width: 768px){
+        width: calc(50% - 10px);
+    }
+}
+.about-intro__media {
+    width: 100%;
+    aspect-ratio: 100 / 56.25;
+    border-radius: 8px;
+    overflow: hidden;
+    video, iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.about-intro__media.fancy-media{
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+}
+
+.about-intro__fancy-start{
+    z-index: 10;
+    width: 42px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+    path{
+        transition: 300ms ease;
+    }
+
+    &:hover{
+        path{
+            fill: var(--red);
+        }
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}

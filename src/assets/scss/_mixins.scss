@@ -1,0 +1,111 @@
+@mixin headline-1($color: $black){
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: $color;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 28px, 56px, font-size);
+}
+
+@mixin headline-2($color: $black){
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: $black;
+    line-height: 1;
+
+
+    @include calculateResponsiveProperty(1024px, 1920px, 26px, 36px, font-size);
+}
+
+@mixin text-1($color: $black){
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: $black;
+    @include calculateResponsiveProperty(390px, 1023px, 16px, 18px, font-size);
+    @include calculateResponsiveProperty(1024px, 1920px, 18px, 20px, font-size);
+    line-height: 1.5;
+}
+
+@mixin text-2($color: $black){
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $black;
+}
+
+@mixin text-3($color: #2b2b2b){
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $color;
+
+}
+
+@mixin text-4($color: #2b2b2b){
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: $color;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 14px, 16px, font-size);
+}
+
+@mixin text-5($color: $black){
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: $color;
+}
+
+@mixin text-6($color: #2b2b2b){
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: $color;
+}
+
+
+
+@mixin btn-text($color: #2b2b2b){
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color;
+}
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+}
+
+@mixin dotted-list{
+    
+    
+    
+
+    li{
+        padding-left: 1.375em;
+        list-style-position: outside;
+        position: relative;
+        &::before{
+            content: "•";
+            position: absolute;
+            top: 0.0625em;
+            left: .425em;
+            display: inline-block;
+            font-size: 1em;
+            line-height: 1;
+            vertical-align: middle;
+            margin-right:  .5em;
+        }
+    }
+}

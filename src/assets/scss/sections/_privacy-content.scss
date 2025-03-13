@@ -1,0 +1,33 @@
+.privacy-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.privacy-content__block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    h2{
+        margin-bottom: 10px;
+        text-transform: none;
+        font-family: var(--font-family);
+    }
+    a{
+        &:hover{
+            color: var(--green);
+        }
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    a, p, ul{
+        font-weight: 400;
+    }
+}
+
+

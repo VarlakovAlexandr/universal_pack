@@ -1,0 +1,67 @@
+h1:not(.title-lg), h2:not(.title-lg){
+    @include headline-2;
+}
+
+.title-lg{
+    @include headline-1;
+}
+
+
+.portfolio-toggler{
+    @include text-6;
+}
+
+.title-decoration{
+    position: relative;
+    padding-left: 24px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: var(--green);
+
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 9px;
+        width: 5px;
+        height: 100%;
+        background-color: var(--red);
+        
+    }
+}
+.thanks-text-block__title, .hero-section h1, .h-stats__item-num, .hero-section__btn{    
+    @include headline-1;
+    line-height: 1.2;
+}
+.car-form-block__form-block p, .phone-form-block__form-block p, .modal-form-title, h2.category__title, h3.category__title, .privacy-content__block h2, .s-contacts__form-title-block h3{
+    @include text-1;
+}
+
+.advantage-item__title, .category-advantage-item__title, .about__content h3{
+    @include text-3;
+}
+.deep-service__text, .modal-form-subtitle, .category__description, .category__link, .a-about__blocks, .about__blocks, .about__content, .intro-e__subtitle, .about-intro__text, .h-stats__item-text, .product__description-block h3, .product__description-block p, .menu__item{
+    @include text-4;
+}
+.modal-input-label{
+    @include text-5;
+}
+.advantage-item__text, .privacy-content__block p, .privacy-content__block a, .privacy-content__block ul, .breadcrumbs a, .breadcrumbs span{
+    @include text-6;
+}
+
+
+.text-red{
+    color: var(--red);
+}
+
+.text-center{
+    text-align: center;
+}

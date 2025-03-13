@@ -1,0 +1,172 @@
+@use "sass:math";
+@import 'functions';
+
+@mixin calculateResponsiveProperty($startBreakPoint, $endBreakPoint, $startValue, $finishValue, $property ){
+	@media (min-width: $startBreakPoint){
+		#{$property}: calculateResponsiveValue( $startBreakPoint, $endBreakPoint, $startValue, $finishValue );
+		
+	}
+	@media (min-width: $endBreakPoint){
+		#{$property}: $finishValue;
+	}
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--black: #333;
+	--green: #005d33;
+	--red: #a92023;
+	--grey: #f1f2f3;
+	--white: #fff;
+
+	--font-family: "SF UI Text", sans-serif;
+	--second-family: "Gotham Pro", sans-serif;	
+}
+
+$black: #333;
+
+a{
+	text-decoration: none;
+}
+button, textarea, input{
+	background: transparent;
+	border: none;
+	outline: none;
+}
+textarea, input{
+	width: 100%;
+}
+a, textarea, input, button{
+	transition: ease-in 300ms;
+	font-family: inherit;
+	outline: none;
+}
+a, textarea, input, button{
+	font-family: var(--font-family);
+}
+
+button{
+	cursor: pointer;
+}
+
+textarea{
+	resize: none;
+}
+
+ul{
+	list-style: none;
+}
+
+address{
+	font-style: normal;
+}
+
+html{
+	
+	font-family: var(--font-family);
+}
+body{
+	display: flex;
+	flex-direction: column;	
+	min-height: 100vh;
+	
+}
+
+body.no-scroll{
+	overflow: hidden;
+}
+
+
+.page{
+	display: flex;		
+	flex-grow: 1;
+
+	width: 100%;
+}
+
+
+
+main{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	@media (min-width: 1024px){
+		width: 100%;
+		
+	}
+
+	@media (min-width: 1280px){
+		width: calc(100% - 380px);
+	}
+}
+.page-content{
+	flex-grow: 1;
+	
+	display: flex;
+	flex-direction: column;
+	row-gap: 60px;
+}
+
+section, footer, .header{
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@media (min-width: 768px){
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
+
+.container{
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.fancybox__container{
+	z-index: 10000;
+}
+
+
+.child{
+	display: inline-block;
+	padding-left: 8px
+}
+.parent{
+	display: inline-block;
+}
+
+@import 'mixins';
+
+@import 'units/typography';
+@import 'units/buttons';
+@import 'units/modals';
+@import 'units/ui';
+
+
+
+
+@import 'sections/footer';
+@import 'sections/portfolio';
+@import 'sections/deep-services';
+@import 'sections/advantages';
+@import 'sections/our-services';
+@import 'sections/forms';
+@import 'sections/our-clients';
+@import 'sections/categories';
+@import 'sections/category-advantages';
+@import 'sections/about';
+@import 'sections/privacy-content';
+@import 'sections/intro-e-section';
+@import 'sections/intro-ds-section';
+@import 'sections/about-intro';
+@import 'sections/a-about';
+@import 'sections/hero-section';
+@import 'sections/our-products';
+@import 'sections/p-contacts';
+@import 'sections/aside';
+@import 'sections/header';

@@ -1,0 +1,40 @@
+footer{
+    width: 100%;
+    margin-top: 60px;
+    background: #d1d6db;
+
+    padding-top: 56px;
+    padding-bottom: 56px;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: center;
+
+        @media (min-width: 1024px){
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 90px;
+        }
+    }
+
+    a, p {
+        @include text-6($black);
+        text-align: center;
+        @media (min-width: 1024px){
+            text-align: left;
+        }
+    }
+
+    a{
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+
+        
+        &:hover{
+            color: var(--green);
+        }
+    }
+}
