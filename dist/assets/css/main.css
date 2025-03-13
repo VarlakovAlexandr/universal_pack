@@ -2852,6 +2852,7 @@ footer a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 40px;
+  padding-top: 50px;
 }
 
 .privacy-content__block {
